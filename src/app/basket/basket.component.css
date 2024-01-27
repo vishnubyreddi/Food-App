@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .home-button {
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+  }
+  
+  .food-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .food-item img {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+  }
+  
+  .quantity {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  
+  .quantity input {
+    width: 30px;
+  }
+  
+  .total-cost {
+    margin-top: 20px;
+  }
+  
+  .delivery-address {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .address-heading {
+    text-align: left;
+  }
+  
+  .address-fields {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .address-field {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .address-field label {
+    margin-bottom: 5px;
+  }
+  
+  .address-field input {
+    width: 200px;
+    text-align: center;
+  }
+  
+  .order-button {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .home-icon {
+    width: 20px;
+    height: 20px;
+  }
+  

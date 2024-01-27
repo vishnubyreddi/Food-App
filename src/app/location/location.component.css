@@ -1,0 +1,43 @@
+.location-container {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+  }
+  
+  input[type="text"],
+  input[type="checkbox"] {
+    width: 100%;
+    padding: 5px;
+  }
+  
+  .checkbox-group {
+    margin-top: 10px;
+  }
+  
+  .actions {
+    margin-top: 20px;
+    text-align: right;
+  }
+  
+  .save-btn,
+  .edit-btn {
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .edit-btn {
+    background-color: #ffc107;
+    margin-left: 10px;
+  }
+  

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cart</title>
+</head>
+<body>
+  <div class="header">
+    <button class="home-button" routerLink="/home"><img src="assets/homePage.jpeg" alt="Location" class="home-icon" /></button>
+    <h1>Cart</h1>
+    <div></div> <!-- Empty div for spacing -->
+  </div>
+
+  <div class="food-item">
+    <img src="assets/food2.jpeg" alt="Food 1">
+    <h3>Food Item 1</h3>
+    <p class="price">$10</p>
+    <div class="quantity">
+      <button onclick="decrementQuantity(this)">-</button>
+      <input type="number" min="0" value="0" onchange="calculateTotal()">
+      <button onclick="incrementQuantity(this)">+</button>
+    </div>
+  </div>
+
+  <div class="food-item">
+    <img src="assets/food1.jpeg" alt="Food 2">
+    <h3>Food Item 2</h3>
+    <p class="price">$15</p>
+    <div class="quantity">
+      <button onclick="decrementQuantity(this)">-</button>
+      <input type="number" min="0" value="0" onchange="calculateTotal()">
+      <button onclick="incrementQuantity(this)">+</button>
+    </div>
+  </div>
+
+  <div class="total-cost">
+    <label for="total">Total Cost:</label>
+    <input type="text" id="total" placeholder="Enter total cost" readonly>
+  </div>
+
+  <div class="delivery-address">
+    <h3 class="address-heading">Delivery Address:</h3>
+    <div class="address-fields">
+      <div class="address-field">
+        <label for="pin">Pin Code:</label>
+        <input type="text" id="pin" placeholder="Enter pin code">
+      </div>
+      <div class="address-field">
+        <label for="street">Street:</label>
+        <input type="text" id="street" placeholder="Enter street">
+      </div>
+      <div class="address-field">
+        <label for="city">City:</label>
+        <input type="text" id="city" placeholder="Enter city">
+      </div>
+      <div class="address-field">
+        <label for="landmark">Landmark:</label>
+        <input type="text" id="landmark" placeholder="Enter landmark">
+      </div>
+      <div class="address-field">
+        <label for="mobile">Mobile Number:</label>
+        <input type="text" id="mobile" placeholder="Enter mobile number">
+      </div>
+    </div>
+  </div>
+
+  <button class="order-button" onclick="calculateTotal()" routerLink="/payment">Place Order</button>
+</body>
+</html>

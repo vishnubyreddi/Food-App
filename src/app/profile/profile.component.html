@@ -1,0 +1,26 @@
+<div class="profile-container">
+    <h1>User Profile</h1>
+    <div class="profile-details">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name"  [disabled]="!editing">
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" [disabled]="!editing">
+      </div>
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="number" id="age" [disabled]="!editing">
+      </div>
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <textarea id="address" [disabled]="!editing"></textarea>
+      </div>
+    </div>
+    <div class="actions">
+      <button class="edit-btn" (click)="toggleEditing()" *ngIf="!editing">Edit</button>
+      <button class="save-btn" (click)="saveUser()" *ngIf="editing">Save</button>
+    </div>
+  </div>
+  

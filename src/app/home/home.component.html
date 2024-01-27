@@ -1,0 +1,65 @@
+<!-- app.component.html -->
+<div class="container">
+    <!-- Location and Username -->
+    <div class="top-bar">
+     <img src="assets/logo.jpg" alt="Logo" class="logo-image">
+      <!-- Search -->
+      <div class="search-container">
+        <input type="text" [(ngModel)]="searchText" placeholder="Search for food" />
+        <button class="search-button" [routerLink]="['/searchFood']" [queryParams]="{ searchText: searchText }">Search</button>
+      </div>
+      <button class="location-button" routerLink="/location">
+        <img src="assets/location.jpg" alt="Location" class="location-icon" />
+      </button>
+      <div class="username-dropdown">
+        <button class="username-button">
+          <img src="assets/profilePic.jpeg" alt="User Image" class="user-image" />
+          {{ username }}
+        </button>
+        <div class="dropdown-content">
+          <a routerLink="/profile">Profile</a>
+          <a href="#">Settings</a>
+          <a href="#">Logout</a>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-text">
+        <marquee behavior="scroll" direction="left">Free delivery for orders above 400/-</marquee>
+    </div>
+    <br>
+    <h3>Trending Items</h3>
+    <!-- Items with Images -->
+    <div class="items-container">
+      <div class="item" *ngFor="let item of trendingFood">
+        <h3>{{ item.name }}</h3>
+      
+        <img [src]="item.image" alt="Food Item" class="food-image" />
+        <div class="item-controls">
+          <button class="btn-remove" (click)="removeFromCart(item)">-</button>
+          <input type="number" [(ngModel)]="item.count" class="item-count" disabled />
+          <button class="btn-add" (click)="addToCart(item)">+</button>
+        </div>
+          <!-- Add a container for nutrition content tooltip -->
+          <div class="nutrition-tooltip">
+            <div class="tooltip-content">
+              <p>Calories: {{ item.nutrition.calories }}</p>
+              <p>Protein: {{ item.nutrition.protien }}</p>
+              <p>Carbs: {{ item.nutrition.carbs }}</p>
+              <p>Fat: {{ item.nutrition.fat }}</p>
+            </div>
+          </div>
+      </div>
+      
+    </div>
+    <!-- Bottom Buttons -->
+    <div class="bottom-bar">
+      <button class="button">Delivery</button>
+      <button class="button">Dining</button>
+      <button class="button">Money</button>
+    </div>
+    <br>
+    <div>
+      <button class="cart_button" routerLink="/basket">Go to Cart</button>
+    </div>
+  </div>
+  

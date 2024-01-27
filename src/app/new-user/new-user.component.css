@@ -1,0 +1,96 @@
+.new-user-container {
+    width: 380px; /* Adjust the width as needed */
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid transparent;
+    background-color: #000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .new-user-container::before,
+  .new-user-container::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+  }
+  
+  .new-user-container::before {
+    background: linear-gradient(to right, blue, transparent);
+    top: 0;
+    transform: translateY(-2px);
+  }
+  
+  .new-user-container::after {
+    background: linear-gradient(to right, transparent, red);
+    bottom: 0;
+    transform: translateY(2px);
+  }
+  
+  /* ... Rest of the styles ... */
+  
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background-color: #111;
+    color: #fff;
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  .form-control:focus {
+    outline: none;
+    border-color: #e55934;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-image: linear-gradient(to right, #007bff, #e55934);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-image 0.3s ease-in-out;
+  }
+  
+  .btn-primary {
+    background-image: linear-gradient(to right, #007bff, #e55934);
+  }
+  
+  .btn:hover {
+    background-image: linear-gradient(to right, #0056b3, #d73d20);
+  }
+  
+  
+  .or-text {
+    margin: 20px 0;
+    text-align: center;
+    color: #777;
+  }
+  
+  .logo-image {
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* Add any other styles as needed */
+  

@@ -1,0 +1,23 @@
+<h1 class="search-results-title">Search Results</h1>
+
+<div *ngIf="foodItems.length > 0" class="search-results-container">
+  <p class="search-results-info">Showing results for: {{ searchText }}</p>
+  <ul class="food-items-list">
+    <li *ngFor="let foodItem of foodItems" class="food-item">
+      <div class="food-item-info">
+        <h3 class="food-item-name">{{ foodItem.name }}</h3>
+        <input type="number" [(ngModel)]="foodItem.count" class="item-count" disabled />
+      </div>
+      <img [src]="foodItem.image" class="food-item-image" />
+      <div class="item-controls">
+        <button class="btn-remove" (click)="removeFromCart(foodItem)">-</button>
+        <button class="btn-add" (click)="addToCart(foodItem)">+</button>
+      </div>
+    </li>
+  </ul>
+  <button class="cart-button">Go to Cart</button>
+</div>
+
+<div *ngIf="foodItems.length === 0" class="no-results-container">
+  <p class="no-results-info">No results found for: {{ searchText }}</p>
+</div>
